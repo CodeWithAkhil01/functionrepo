@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hover-box" id="hoverBox">
+        Hover on meeeee
+    </div>
+    <script>
+        document.addEventListener('mouseover', () => {
+            let hBox = document.getElementById('hoverBox');
+            hBox.addEventListener('mouseover', () => {
+                hBox.classList.add('h');
+                hBox.textContent = 'Hello!';
+            });
+            hBox.addEventListener('mouseout', () => {
+                hBox.classList.remove('h');
+                hBox.textContent = 'Hover over me';
+            });
+        });
+    </script>
+    <!-- <button id="mode">change mode</button> -->
+    <!-- <script src="event.js"></script> -->
+</body>
+</html>
